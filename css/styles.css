@@ -12,19 +12,22 @@ body {
   /* Top Title */
   h1 {
     margin: 1rem;
-    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
     text-align: left;
   }
   
-  /* Main Layout (Sidebar + Content) */
+  /* Main Layout (navbar + Content) */
   .main-layout {
     display: flex;
     flex: 1;
     overflow: hidden;
+    gap: 2rem;
+    padding: 1rem;
   }
   
   /* navigation bar */
-  .sidebar {
+  .navbar {
     width: 80px;
     background-color: #222;
     display: flex;
@@ -35,7 +38,7 @@ body {
     border-bottom-right-radius: 20px;
   }
   
-  .sidebar a {
+  .navbar a {
     width: 48px;
     height: 48px;
     background-color: #fff;
@@ -47,7 +50,7 @@ body {
     overflow: hidden;
   }
   
-  .sidebar img {
+  .navbar img {
     width: 28px;
     height: 28px;
   }
@@ -64,15 +67,16 @@ body {
   .overview-box {
     background-color: #333;
     color: #fff;
-    padding: 1rem;
-    margin-bottom: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
   }
   
   /* Bottom Section (Map and Location Info) */
   .bottom-section {
     flex: 1;
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
+
   }
   
   /* Map Container */
