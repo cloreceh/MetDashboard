@@ -1,0 +1,156 @@
+﻿SELECTED_ASOS_ID,CLIENT,FACILITY_NAME,P12,SITE,FORECAST_TIME,Q12
+RDU,EsteMauder,Greenwood Research Lab,34,RDU,1743681991095784000,0
+RDU,EsteMauder,Greenwood Research Lab,5,RDU,1743725191095784000,0
+RDU,EsteMauder,Greenwood Research Lab,4,RDU,1743768391095784000,0
+RDU,EsteMauder,Greenwood Research Lab,3,RDU,1743811591095784000,0
+RDU,EsteMauder,Greenwood Research Lab,9,RDU,1743854791095784000,0
+MIA,EsteMauder,Silver Creek Power Plant,3,MIA,1743681991095784000,0
+MIA,EsteMauder,Silver Creek Power Plant,4,MIA,1743725191095784000,0
+MIA,EsteMauder,Silver Creek Power Plant,1,MIA,1743768391095784000,0
+MIA,EsteMauder,Silver Creek Power Plant,3,MIA,1743811591095784000,0
+MIA,EsteMauder,Silver Creek Power Plant,0,MIA,1743854791095784000,0
+SPI,EsteMauder,Cedar Valley Distribution,22,SPI,1743681991095784000,0
+SPI,EsteMauder,Coastal Fisheries HQ,22,SPI,1743681991095784000,0
+SPI,EsteMauder,Cedar Valley Distribution,46,SPI,1743725191095784000,4
+SPI,EsteMauder,Coastal Fisheries HQ,46,SPI,1743725191095784000,4
+SPI,EsteMauder,Cedar Valley Distribution,48,SPI,1743768391095784000,27
+SPI,EsteMauder,Coastal Fisheries HQ,48,SPI,1743768391095784000,27
+SPI,EsteMauder,Cedar Valley Distribution,89,SPI,1743811591095784000,58
+SPI,EsteMauder,Coastal Fisheries HQ,89,SPI,1743811591095784000,58
+SPI,EsteMauder,Cedar Valley Distribution,97,SPI,1743854791095784000,127
+SPI,EsteMauder,Coastal Fisheries HQ,97,SPI,1743854791095784000,127
+CQT,EsteMauder,Starview Aerospace Facility,1,CQT,1743681991095784000,0
+CQT,EsteMauder,Starview Aerospace Facility,9,CQT,1743725191095784000,0
+CQT,EsteMauder,Starview Aerospace Facility,0,CQT,1743768391095784000,0
+CQT,EsteMauder,Starview Aerospace Facility,0,CQT,1743811591095784000,0
+CQT,EsteMauder,Starview Aerospace Facility,0,CQT,1743854791095784000,0
+SFF,EsteMauder,Redwood Aviation Complex,22,SFF,1743681991095784000,0
+SFF,EsteMauder,Redwood Aviation Complex,27,SFF,1743725191095784000,0
+SFF,EsteMauder,Redwood Aviation Complex,0,SFF,1743768391095784000,0
+SFF,EsteMauder,Redwood Aviation Complex,0,SFF,1743811591095784000,0
+SFF,EsteMauder,Redwood Aviation Complex,0,SFF,1743854791095784000,0
+TPF,EsteMauder,Summerset Cold Storage,15,TPF,1743681991095784000,0
+TPF,EsteMauder,Summerset Cold Storage,4,TPF,1743725191095784000,0
+TPF,EsteMauder,Summerset Cold Storage,3,TPF,1743768391095784000,0
+TPF,EsteMauder,Summerset Cold Storage,1,TPF,1743811591095784000,0
+TPF,EsteMauder,Summerset Cold Storage,3,TPF,1743854791095784000,0
+CLT,EsteMauder,Everest Industrial Plant,48,CLT,1743681991095784000,7
+CLT,EsteMauder,Everest Industrial Plant,24,CLT,1743725191095784000,10
+CLT,EsteMauder,Everest Industrial Plant,3,CLT,1743768391095784000,0
+CLT,EsteMauder,Everest Industrial Plant,8,CLT,1743811591095784000,0
+CLT,EsteMauder,Everest Industrial Plant,3,CLT,1743854791095784000,0
+SVN,EsteMauder,Horizon Tech Park,2,SVN,1743681991095784000,0
+SVN,EsteMauder,Lakeside Processing Facility,2,SVN,1743681991095784000,0
+SVN,EsteMauder,Horizon Tech Park,1,SVN,1743725191095784000,0
+SVN,EsteMauder,Lakeside Processing Facility,1,SVN,1743725191095784000,0
+SVN,EsteMauder,Horizon Tech Park,0,SVN,1743768391095784000,0
+SVN,EsteMauder,Lakeside Processing Facility,0,SVN,1743768391095784000,0
+SVN,EsteMauder,Horizon Tech Park,1,SVN,1743811591095784000,0
+SVN,EsteMauder,Lakeside Processing Facility,1,SVN,1743811591095784000,0
+SVN,EsteMauder,Horizon Tech Park,1,SVN,1743854791095784000,0
+SVN,EsteMauder,Lakeside Processing Facility,1,SVN,1743854791095784000,0
+MCJ,EsteMauder,Bluewave Water Treatment,5,MCJ,1743681991095784000,0
+MCJ,EsteMauder,Orchard Chemical Solutions,5,MCJ,1743681991095784000,0
+MCJ,EsteMauder,Bluewave Water Treatment,2,MCJ,1743725191095784000,0
+MCJ,EsteMauder,Orchard Chemical Solutions,2,MCJ,1743725191095784000,0
+MCJ,EsteMauder,Bluewave Water Treatment,7,MCJ,1743768391095784000,0
+MCJ,EsteMauder,Orchard Chemical Solutions,7,MCJ,1743768391095784000,0
+MCJ,EsteMauder,Bluewave Water Treatment,12,MCJ,1743811591095784000,0
+MCJ,EsteMauder,Orchard Chemical Solutions,12,MCJ,1743811591095784000,0
+MCJ,EsteMauder,Bluewave Water Treatment,20,MCJ,1743854791095784000,0
+MCJ,EsteMauder,Orchard Chemical Solutions,20,MCJ,1743854791095784000,0
+BKF,EsteMauder,Aspen Biotech Center,13,BKF,1743681991095784000,0
+BKF,EsteMauder,Western Energy Refinery,13,BKF,1743681991095784000,0
+BKF,EsteMauder,Aspen Biotech Center,90,BKF,1743725191095784000,12
+BKF,EsteMauder,Western Energy Refinery,90,BKF,1743725191095784000,12
+BKF,EsteMauder,Aspen Biotech Center,64,BKF,1743768391095784000,3
+BKF,EsteMauder,Western Energy Refinery,64,BKF,1743768391095784000,3
+BKF,EsteMauder,Aspen Biotech Center,91,BKF,1743811591095784000,12
+BKF,EsteMauder,Western Energy Refinery,91,BKF,1743811591095784000,12
+BKF,EsteMauder,Aspen Biotech Center,94,BKF,1743854791095784000,16
+BKF,EsteMauder,Western Energy Refinery,94,BKF,1743854791095784000,16
+ATT,EsteMauder,Willow Creek Textile Mill,7,ATT,1743681991095784000,0
+ATT,EsteMauder,Willow Creek Textile Mill,9,ATT,1743725191095784000,0
+ATT,EsteMauder,Willow Creek Textile Mill,27,ATT,1743768391095784000,1
+ATT,EsteMauder,Willow Creek Textile Mill,58,ATT,1743811591095784000,12
+ATT,EsteMauder,Willow Creek Textile Mill,81,ATT,1743854791095784000,41
+CMH,EsteMauder,Pinehill Medical Center,99,CMH,1743681991095784000,71
+CMH,EsteMauder,Pinehill Medical Center,71,CMH,1743725191095784000,6
+CMH,EsteMauder,Pinehill Medical Center,97,CMH,1743768391095784000,71
+CMH,EsteMauder,Pinehill Medical Center,79,CMH,1743811591095784000,37
+CMH,EsteMauder,Pinehill Medical Center,82,CMH,1743854791095784000,62
+SAN,EsteMauder,Maplewood Packaging Plant,9,SAN,1743681991095784000,0
+SAN,EsteMauder,Maplewood Packaging Plant,16,SAN,1743725191095784000,0
+SAN,EsteMauder,Maplewood Packaging Plant,0,SAN,1743768391095784000,0
+SAN,EsteMauder,Maplewood Packaging Plant,2,SAN,1743811591095784000,0
+SAN,EsteMauder,Maplewood Packaging Plant,0,SAN,1743854791095784000,0
+FTY,EsteMauder,Metro Auto Assembly,8,FTY,1743681991095784000,0
+FTY,EsteMauder,Metro Auto Assembly,4,FTY,1743725191095784000,0
+FTY,EsteMauder,Metro Auto Assembly,2,FTY,1743768391095784000,0
+FTY,EsteMauder,Metro Auto Assembly,8,FTY,1743811591095784000,0
+FTY,EsteMauder,Metro Auto Assembly,3,FTY,1743854791095784000,0
+LUK,EsteMauder,Golden Plains Agribusiness,98,LUK,1743681991095784000,101
+LUK,EsteMauder,Crimson Electronics Lab,98,LUK,1743681991095784000,101
+LUK,EsteMauder,Golden Plains Agribusiness,81,LUK,1743725191095784000,15
+LUK,EsteMauder,Crimson Electronics Lab,81,LUK,1743725191095784000,15
+LUK,EsteMauder,Golden Plains Agribusiness,98,LUK,1743768391095784000,78
+LUK,EsteMauder,Crimson Electronics Lab,98,LUK,1743768391095784000,78
+LUK,EsteMauder,Golden Plains Agribusiness,91,LUK,1743811591095784000,53
+LUK,EsteMauder,Crimson Electronics Lab,91,LUK,1743811591095784000,53
+LUK,EsteMauder,Golden Plains Agribusiness,77,LUK,1743854791095784000,63
+LUK,EsteMauder,Crimson Electronics Lab,77,LUK,1743854791095784000,63
+TIW,EsteMauder,Urban Infrastructure Hub,25,TIW,1743681991095784000,0
+TIW,EsteMauder,Urban Infrastructure Hub,2,TIW,1743725191095784000,0
+TIW,EsteMauder,Urban Infrastructure Hub,0,TIW,1743768391095784000,0
+TIW,EsteMauder,Urban Infrastructure Hub,0,TIW,1743811591095784000,0
+TIW,EsteMauder,Urban Infrastructure Hub,0,TIW,1743854791095784000,0
+CWN,EsteMauder,Liberty Steelworks,14,CWN,1743681991095784000,0
+CWN,EsteMauder,Frontier Robotics Center,14,CWN,1743681991095784000,0
+CWN,EsteMauder,Liberty Steelworks,75,CWN,1743725191095784000,8
+CWN,EsteMauder,Frontier Robotics Center,75,CWN,1743725191095784000,8
+CWN,EsteMauder,Liberty Steelworks,25,CWN,1743768391095784000,1
+CWN,EsteMauder,Frontier Robotics Center,25,CWN,1743768391095784000,1
+CWN,EsteMauder,Liberty Steelworks,81,CWN,1743811591095784000,4
+CWN,EsteMauder,Frontier Robotics Center,81,CWN,1743811591095784000,4
+CWN,EsteMauder,Liberty Steelworks,85,CWN,1743854791095784000,10
+CWN,EsteMauder,Frontier Robotics Center,85,CWN,1743854791095784000,10
+JRB,EsteMauder,Riverbend Recycling Center,62,JRB,1743681991095784000,2
+JRB,EsteMauder,Neptune Shipping Terminal,62,JRB,1743681991095784000,2
+JRB,EsteMauder,Riverbend Recycling Center,57,JRB,1743725191095784000,10
+JRB,EsteMauder,Neptune Shipping Terminal,57,JRB,1743725191095784000,10
+JRB,EsteMauder,Riverbend Recycling Center,66,JRB,1743768391095784000,8
+JRB,EsteMauder,Neptune Shipping Terminal,66,JRB,1743768391095784000,8
+JRB,EsteMauder,Riverbend Recycling Center,41,JRB,1743811591095784000,5
+JRB,EsteMauder,Neptune Shipping Terminal,41,JRB,1743811591095784000,5
+JRB,EsteMauder,Riverbend Recycling Center,32,JRB,1743854791095784000,0
+JRB,EsteMauder,Neptune Shipping Terminal,32,JRB,1743854791095784000,0
+DAL,EsteMauder,Sunrise Logistics Hub,82,DAL,1743681991095784000,26
+DAL,EsteMauder,Sunrise Logistics Hub,72,DAL,1743725191095784000,15
+DAL,EsteMauder,Sunrise Logistics Hub,83,DAL,1743768391095784000,17
+DAL,EsteMauder,Sunrise Logistics Hub,100,DAL,1743811591095784000,79
+DAL,EsteMauder,Sunrise Logistics Hub,98,DAL,1743854791095784000,151
+BDU,EsteMauder,Northpoint Warehouse,9,BDU,1743681991095784000,0
+BDU,EsteMauder,Northpoint Warehouse,82,BDU,1743725191095784000,6
+BDU,EsteMauder,Northpoint Warehouse,61,BDU,1743768391095784000,6
+BDU,EsteMauder,Northpoint Warehouse,86,BDU,1743811591095784000,18
+BDU,EsteMauder,Northpoint Warehouse,72,BDU,1743854791095784000,18
+BUF,EsteMauder,Ironclad Foundry,97,BUF,1743681991095784000,44
+BUF,EsteMauder,Highland Data Center,97,BUF,1743681991095784000,44
+BUF,EsteMauder,Ironclad Foundry,53,BUF,1743725191095784000,6
+BUF,EsteMauder,Highland Data Center,53,BUF,1743725191095784000,6
+BUF,EsteMauder,Ironclad Foundry,15,BUF,1743768391095784000,0
+BUF,EsteMauder,Highland Data Center,15,BUF,1743768391095784000,0
+BUF,EsteMauder,Ironclad Foundry,6,BUF,1743811591095784000,0
+BUF,EsteMauder,Highland Data Center,6,BUF,1743811591095784000,0
+BUF,EsteMauder,Ironclad Foundry,84,BUF,1743854791095784000,37
+BUF,EsteMauder,Highland Data Center,84,BUF,1743854791095784000,37
+RDU,EsteMauder,Summit Manufacturing,34,RDU,1743681991095784000,0
+RDU,EsteMauder,Summit Manufacturing,5,RDU,1743725191095784000,0
+RDU,EsteMauder,Summit Manufacturing,4,RDU,1743768391095784000,0
+RDU,EsteMauder,Summit Manufacturing,3,RDU,1743811591095784000,0
+RDU,EsteMauder,Summit Manufacturing,9,RDU,1743854791095784000,0
+RDU,EsteMauder,Gateway Transportation Depot,34,RDU,1743681991095784000,0
+RDU,EsteMauder,Gateway Transportation Depot,5,RDU,1743725191095784000,0
+RDU,EsteMauder,Gateway Transportation Depot,4,RDU,1743768391095784000,0
+RDU,EsteMauder,Gateway Transportation Depot,3,RDU,1743811591095784000,0
+RDU,EsteMauder,Gateway Transportation Depot,9,RDU,1743854791095784000,0
