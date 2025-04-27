@@ -1,4 +1,408 @@
 {
   "type": "FeatureCollection",
-  "features": []
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.0007065,
+          39.9622601
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.9018053,
+          35.996653
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8430827,
+          35.2272086
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.7968559,
+          32.7762719
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.9018053,
+          35.996653
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.270545,
+          40.0149856
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.6439575,
+          39.7990175
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.0921335,
+          32.0790074
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.0921335,
+          32.0790074
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.8783922,
+          42.8867166
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.3676974,
+          29.7589382
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.19362,
+          25.7741728
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.9018053,
+          35.996653
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0060152,
+          40.7127281
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.6439575,
+          39.7990175
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.984862,
+          39.7392364
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.3676974,
+          29.7589382
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.162772,
+          32.7174202
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.8783922,
+          42.8867166
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.5124602,
+          39.1014537
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3902644,
+          33.7489924
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.984862,
+          39.7392364
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.242766,
+          34.0536909
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0060152,
+          40.7127281
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.5124602,
+          39.1014537
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7436995,
+          30.2711286
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.438329,
+          47.2455013
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.825348,
+          38.8339578
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.825348,
+          38.8339578
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.458444,
+          27.9477595
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.42351,
+          47.6571934
+        ]
+      },
+      "properties": {
+        "client": "EsteMauder"
+      }
+    }
+  ]
 }
