@@ -3,28 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Weather Dashboard - Severe</title>
+  <title>Client Meteorological Risk - Severe</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Overview</a></li>
-      <li><a href="fire.html">Fire</a></li>
-      <li><a href="hurricane.html">Hurricane</a></li>
-      <li><a href="flooding.html">Flooding</a></li>
-      <li><a href="severe.html">Severe</a></li>
-      <li><a href="highwind.html">High Wind</a></li>
-      <li><a href="forecast.html">Forecast</a></li>
-    </ul>
-  </nav>
+  <h1>Client Meteorological Risk - Severe Weather</h1>
 
-  <main>
-    <h1>Client Meteorlogical Risk - Severe</h1>
-    <div id="map" style="height: 600px;"></div>
-  </main>
+  <div class="main-layout">
+    <!-- Sidebar with icons -->
+    <div class="sidebar">
+        <a href="index.html"><img src="icons/overview.svg" alt="Overview Icon"></a>
+        <a href="forecast.html"><img src="icons/forecast.svg" alt="Severe Icon"></a>
+        <a href="severe.html"><img src="icons/severe.svg" alt="Severe Icon"></a>
+        <a href="fire.html"><img src="icons/fire.svg" alt="Fire Icon"></a>
+        <a href="flooding.html"><img src="icons/flood.svg" alt="Flood Icon"></a>
+        <a href="hurricane.html"><img src="icons/hurricane.svg" alt="Hurricane Icon"></a>
+        <a href="wind.html"><img src="icons/wind.svg" alt="Wind Icon"></a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <div class="overview-box">
+        Highlights: &lt;Text from Forecaster with daily updates and overview to aid in client getting to the most important data quickly.&gt;
+      </div>
+
+      <div class="bottom-section">
+        <!-- Map -->
+        <div class="map-container">
+          <div id="map"></div>
+        </div>
+
+        <!-- Location-specific forecast info -->
+        <div class="location-info">
+          Forecast information<br>For location selected
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="js/main.js"></script>
