@@ -49,7 +49,7 @@ fetch('data/LocationsRisk.csv')
       }
     });
 
-    // Create Bar Chart (% of Moderate+ Risks per Location)
+    // Create Bar Chart (% of Moderate+ Risks per Location) - Want to change to 100% Bar chart in future
     const locationLabels = riskData.map(r => r.Location);
     const moderateOrHigherPercentages = riskData.map(row => {
       const total = Object.keys(row).filter(k => k !== "Location").length;
@@ -154,10 +154,10 @@ function createGauge(canvasId, percent, label) {
 // Color Mapping for Risk Levels
 function riskColor(level) {
   switch (level) {
-    case 'Extreme': return '#d73027';
-    case 'High': return '#fc8d59';
-    case 'Moderate': return '#fee08b';
-    case 'Low': return '#d9ef8b';
+    case 'Extreme': return '#FF337A';
+    case 'High': return '#C9183B';
+    case 'Moderate': return '#E0793E';
+    case 'Low': return '#0E8142';
     case 'None': return '#91cf60';
     default: return '#ccc';
   }
