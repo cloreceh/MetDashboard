@@ -7,45 +7,51 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/risk.js" defer></script>
 </head>
 <body>
 
   <h1>Client Meteorological Risk - Overview</h1>
 
   <div class="main-layout">
-    <!-- Sidebar with icons -->
+    <!-- Sidebar -->
     <div class="navbar">
-      <a href="index.html" title="Overview"><img src="images/overview.svg" alt="Overview Icon"></a>
-      <a href="forecast.html" title="Forecast"><img src="images/forecast.svg" alt="Forecast Icon"></a>
-      <a href="severe.html" title="Severe Weather"><img src="images/severe.svg" alt="Severe Icon"></a>
-      <a href="fire.html" title="Fire Risk"><img src="images/fire.svg" alt="Fire Icon"></a>
-      <a href="flooding.html" title="Flooding Risk"><img src="images/flood.svg" alt="Flood Icon"></a>
-      <a href="hurricane.html" title="Hurricane Risk"><img src="images/hurricane.svg" alt="Hurricane Icon"></a>
-      <a href="wind.html" title="Wind Risk"><img src="images/wind.svg" alt="Wind Icon"></a>
+      <a href="index.html"><img src="images/overview.svg" alt="Overview"></a>
+      <a href="forecast.html"><img src="images/forecast.svg" alt="Forecast"></a>
+      <a href="severe.html"><img src="images/severe.svg" alt="Severe"></a>
+      <a href="fire.html"><img src="images/fire.svg" alt="Fire"></a>
+      <a href="flooding.html"><img src="images/flood.svg" alt="Flood"></a>
+      <a href="hurricane.html"><img src="images/hurricane.svg" alt="Hurricane"></a>
+      <a href="wind.html"><img src="images/wind.svg" alt="Wind"></a>
     </div>
 
     <!-- Main Content -->
-    <div class="content">
+    <div class="content overview-layout">
       <div class="overview-box">
         Highlights: &lt;Text from Forecaster with daily updates and overview to aid in client getting to the most important data quickly.&gt;
       </div>
 
-      <div class="bottom-section">
-        <!-- Map -->
-        <div class="map-container">
-          <div id="map"></div>
-        </div>
+      <div class="dashboard-visuals">
+        <!-- Gauges -->
+        <div class="gauge"><canvas id="extremeGauge"></canvas><p>Extreme Risk</p></div>
+        <div class="gauge"><canvas id="highGauge"></canvas><p>High Risk</p></div>
+        <div class="gauge"><canvas id="mediumGauge"></canvas><p>Medium Risk</p></div>
+        <div class="gauge"><canvas id="lowGauge"></canvas><p>Low Risk</p></div>
+        <div class="gauge"><canvas id="slightGauge"></canvas><p>Slight Risk</p></div>
 
-        <!-- Location-specific forecast info -->
-        <div class="location-info">
-          Forecast information<br>For location selected
+        <!-- Risk Table -->
+        <div class="risk-table" id="riskTable"></div>
+
+        <!-- Charts -->
+        <div class="pie-chart">
+          <canvas id="riskPieChart"></canvas>
+        </div>
+        <div class="bar-chart">
+          <canvas id="riskBarChart"></canvas>
         </div>
       </div>
     </div>
   </div>
-
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="js/main.js"></script>
 
 </body>
 </html>
