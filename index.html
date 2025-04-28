@@ -25,31 +25,35 @@
       <a href="wind.html"><img src="images/wind.svg" alt="Wind"></a>
     </div>
 
-    <!-- Main Content -->
-    <div class="content overview-layout">
-      <div class="overview-box">
+    <div class="dashboard-visuals">
+
+      <!-- Overview Top Box -->
+      <div class="overview-top-box">
         Highlights: &lt;Text from Forecaster with daily updates and overview to aid in client getting to the most important data quickly.&gt;
       </div>
-
-      <div class="dashboard-visuals">
-        <!-- Gauges -->
+    
+      <!-- Gauges Row -->
+      <div class="gauges-row">
         <div class="gauge"><canvas id="extremeGauge"></canvas><p>Extreme Risk</p></div>
         <div class="gauge"><canvas id="highGauge"></canvas><p>High Risk</p></div>
         <div class="gauge"><canvas id="mediumGauge"></canvas><p>Medium Risk</p></div>
         <div class="gauge"><canvas id="lowGauge"></canvas><p>Low Risk</p></div>
         <div class="gauge"><canvas id="slightGauge"></canvas><p>Slight Risk</p></div>
-
-        <!-- Risk Table -->
+      </div>
+    
+      <!-- Risk Table + Charts Flex Layout -->
+      <div class="risk-charts-container">
         <div class="risk-table" id="riskTable"></div>
-
-        <!-- Charts -->
-        <div class="pie-chart">
-          <canvas id="riskPieChart"></canvas>
-        </div>
-        <div class="bar-chart">
-          <canvas id="riskBarChart"></canvas>
+        <div class="charts-side">
+          <div class="pie-chart">
+            <canvas id="riskPieChart"></canvas>
+          </div>
+          <div class="bar-chart">
+            <canvas id="riskBarChart"></canvas>
+          </div>
         </div>
       </div>
+    
     </div>
   </div>
 

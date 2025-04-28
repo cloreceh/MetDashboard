@@ -16,14 +16,16 @@ h1 {
   text-align: left;
 }
 
+/* Main Layout */
 .main-layout {
   display: flex;
   flex: 1;
   overflow: hidden;
   gap: 2rem;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0;
 }
 
+/* Sidebar */
 .navbar {
   width: 80px;
   background-color: #222;
@@ -51,12 +53,15 @@ h1 {
   height: 28px;
 }
 
+/* Content Area */
 .content {
   flex: 1;
   display: flex;
   flex-direction: column;
+  margin-left: 2rem;
 }
 
+/* Overview Box */
 .overview-box {
   background-color: #333;
   color: white;
@@ -64,7 +69,8 @@ h1 {
   margin-bottom: 2rem;
   border-radius: 10px;
 }
-/* Bottom Section */
+
+/* Bottom Section (for risk pages) */
 .bottom-section {
   flex: 1;
   display: flex;
@@ -93,86 +99,137 @@ h1 {
   text-align: center;
 }
 
-/* ==== Overview Page ONLY ==== */
-.overview-layout .overview-box {
+
+/* Dashboard Visuals Layout */
+.dashboard-visuals {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Overview Top Box */
+.dashboard-visuals .overview-top-box {
   background-color: #333;
   color: white;
   padding: 2rem;
-  margin-bottom: 2rem;
   border-radius: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-.overview-layout .dashboard-visuals {
+/* Gauges Row */
+.dashboard-visuals .gauges-row {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: min-content;
   gap: 1rem;
+  width: 100%;
 }
 
-/* Gauges */
-.overview-layout .gauge {
+/* Each gauge */
+.dashboard-visuals .gauge {
   background-color: #ccc;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 10px;
   text-align: center;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.overview-layout .gauge canvas {
+.dashboard-visuals .gauge canvas {
   width: 100%;
-  height: 100px;
+  height: 60px; 
 }
 
-.overview-layout .gauge p {
-  margin-top: 0.5rem;
+.dashboard-visuals .gauge p {
+  margin: -0.5rem;
   font-weight: bold;
+  font-size: 0.9rem;
 }
 
+
+/* Risk and Charts Layout */
+.dashboard-visuals .risk-charts-container {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
 /* Risk Table */
-.overview-layout .risk-table {
-  grid-column: 1 / span 5;
+.dashboard-visuals .risk-table {
+  flex: 2;
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) repeat(5, minmax(80px, 1fr));
   background-color: #eee;
   padding: 1rem;
   border-radius: 10px;
-  margin-top: 1rem;
-  overflow-x: auto;
+  gap: 4px;
+  align-items: center;
+  text-align: center;
+  min-width: 0;
+  overflow: hidden;
 }
 
-.risk-table-header {
-  display: flex;
+
+.risk-table .header {
   font-weight: bold;
-  margin-bottom: 0.5rem;
 }
 
-.risk-table-row {
-  display: flex;
-  margin-bottom: 0.25rem;
-}
-
-.risk-table-cell {
-  width: 50px;
-  height: 30px;
-  margin-left: 4px;
-  background-color: #ccc;
+.risk-table .cell {
+  padding: 0.5rem;
   border-radius: 5px;
 }
 
-/* Pie and Bar Charts */
-.overview-layout .pie-chart, .overview-layout .bar-chart {
+/* Charts */
+.dashboard-visuals .charts-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dashboard-visuals .pie-chart,
+.dashboard-visuals .bar-chart {
   background-color: #eee;
   padding: 1rem;
   border-radius: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
-.overview-layout .pie-chart canvas,
-.overview-layout .bar-chart canvas {
-  width: 100% !important;
-  height: 250px !important;
+.dashboard-visuals .pie-chart canvas,
+.dashboard-visuals .bar-chart canvas {
+  width: 100%;
+  height: 300px !important;
 }
 
-.overview-layout .pie-chart {
-  grid-column: 1 / span 2;
+/* Bottom Section (for risk pages) */
+.bottom-section {
+  flex: 1;
+  display: flex;
+  gap: 3rem;
 }
 
-.overview-layout .bar-chart {
-  grid-column: 3 / span 3;
+.map-container {
+  flex: 2;
+  background-color: #ddd;
+  position: relative;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.location-info {
+  flex: 1;
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
