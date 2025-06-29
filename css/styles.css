@@ -205,3 +205,31 @@ h1 {
   width: 100%;
   height: 300px !important;
 }
+
+/* ==== Day Selector Buttons ==== */
+.day-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.day-selector button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.day-selector button:hover {
+  background-color: #666;
+}
+
+.day-selector button:focus {
+  outline: 2px solid #999;
+}
