@@ -6,12 +6,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -83.0007065,
-          39.9622601
+          -93.2212239,
+          45.0716387
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater St. Paul - St. Paul MN",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -19,12 +20,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -78.9018053,
-          35.996653
+          -97.7528657,
+          30.3865013
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater Austin TX",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -32,12 +34,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -80.8430827,
-          35.2272086
+          -121.277034,
+          38.5892643
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater California - Sacramento CA",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -45,12 +48,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -96.7968559,
-          32.7762719
+          -121.977909,
+          37.4057302
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater California - San Jose CA",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -58,12 +62,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -78.9018053,
-          35.996653
+          -82.9164901,
+          40.0522342
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater Great Lakes - Columbus OH",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -71,12 +76,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -105.270545,
-          40.0149856
+          -83.3912891,
+          42.4960944
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater Great Lakes - Detroit MI",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -84,12 +90,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -89.6439575,
-          39.7990175
+          -79.869825,
+          40.492247
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater Great Lakes - Pittsburgh PA",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -97,12 +104,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -81.0921335,
-          32.0790074
+          -71.4016037,
+          42.2993222
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater New England - Boston MA",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -110,12 +118,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -81.0921335,
-          32.0790074
+          -72.739919,
+          41.760249
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater New England - Hartford CT",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -123,12 +132,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -78.8783922,
-          42.8867166
+          -73.7647624,
+          41.0348698
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater New York - White Plains NY",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -136,12 +146,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -95.3676974,
-          29.7589382
+          -122.6635583,
+          45.4653643
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater Pacific Northwest - Portland OR",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -149,12 +160,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -80.19362,
-          25.7741728
+          -122.0952982,
+          47.6612819
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater Pacific Northwest - Seattle WA",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -162,12 +174,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -78.9018053,
-          35.996653
+          -75.048866,
+          39.934903
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater Philadelphia - Cherry Hill NJ",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -175,12 +188,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.0060152,
-          40.7127281
+          -105.131743,
+          39.7186923
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater Rocky Mountain - Denver CO",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -188,12 +202,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -89.6439575,
-          39.7990175
+          -105.0285866,
+          40.5613903
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater Rocky Mountain - Fort Collins CO",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -201,12 +216,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -104.984862,
-          39.7392364
+          -84.213739,
+          33.976733
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater Southeast - Atlanta GA",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -214,12 +230,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -95.3676974,
-          29.7589382
+          -80.8377586,
+          35.0566966
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater Southeast - Charlotte NC",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -227,12 +244,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -117.162772,
-          32.7174202
+          -88.0613135,
+          41.8081285
         ]
       },
       "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater St Louis - Chicago IL",
+        "CLIENT": "Antea Group"
       }
     },
     {
@@ -240,168 +258,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -78.8783922,
-          42.8867166
+          -90.446086,
+          38.7013756
         ]
       },
       "properties": {
-        "client": "EsteMauder"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -84.5124602,
-          39.1014537
-        ]
-      },
-      "properties": {
-        "client": "EsteMauder"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -84.3902644,
-          33.7489924
-        ]
-      },
-      "properties": {
-        "client": "EsteMauder"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -104.984862,
-          39.7392364
-        ]
-      },
-      "properties": {
-        "client": "EsteMauder"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -118.242766,
-          34.0536909
-        ]
-      },
-      "properties": {
-        "client": "EsteMauder"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -74.0060152,
-          40.7127281
-        ]
-      },
-      "properties": {
-        "client": "EsteMauder"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -84.5124602,
-          39.1014537
-        ]
-      },
-      "properties": {
-        "client": "EsteMauder"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -97.7436995,
-          30.2711286
-        ]
-      },
-      "properties": {
-        "client": "EsteMauder"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.438329,
-          47.2455013
-        ]
-      },
-      "properties": {
-        "client": "EsteMauder"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -104.825348,
-          38.8339578
-        ]
-      },
-      "properties": {
-        "client": "EsteMauder"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -104.825348,
-          38.8339578
-        ]
-      },
-      "properties": {
-        "client": "EsteMauder"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -82.458444,
-          27.9477595
-        ]
-      },
-      "properties": {
-        "client": "EsteMauder"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -117.42351,
-          47.6571934
-        ]
-      },
-      "properties": {
-        "client": "EsteMauder"
+        "FACILITY_NAME": "Greater St Louis - St Louis MO",
+        "CLIENT": "Antea Group"
       }
     }
   ]
