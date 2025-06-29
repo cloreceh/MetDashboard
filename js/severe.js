@@ -1,11 +1,8 @@
-// Track the selected location marker
-var selectedMarker = null;
-
-// Track the currently loaded GeoJSON layer for a given day
+// Track currently loaded layers
 var currentDayLayer = null;
-
-// Track the SPC Outlook (polygon) layer
 var outlookLayer = null;
+var selectedMarker = null;
+var currentDay = 1;
 
 // Initialize the Leaflet map centered on the U.S.
 var map = L.map('map').setView([39.5, -98.35], 4);
@@ -55,48 +52,50 @@ function updateLocationInfo(properties) {
 }
 
 /**
- * Load and display the GeoJSON file for a given day.
- * This replaces any previous day's data on the map.
- * @param {number} dayNumber - The day (1 through 8) to load
+ * Load and display GeoJSON data for the selected day.
+ * This includes facility point markers and SPC outlook polygons.
+ * @param {number} dayNumber
  */
 function loadDay(dayNumber) {
-  const filePath = `data/SPC_Data/SPC_day_${dayNumber}.geojson`; // Construct file path
+  currentDay = dayNumber;
 
-  // Remove the previously loaded day layer from the map, if it exists
+  // Build file paths
+  const pointFilePath = `data/SPC_Data/SPC_day_${dayNumber}.geojson`;
+  const outlookFilePath = `data/SPC_Outlooks/SPCOutlook_day_${dayNumber}.geojson`;
+
+  // Remove previously loaded facility layer
   if (currentDayLayer) {
     map.removeLayer(currentDayLayer);
   }
 
-  // Fetch and display the GeoJSON for the selected day
-  fetch(filePath)
+  // Remove previously loaded outlook polygon layer
+  if (outlookLayer) {
+    map.removeLayer(outlookLayer);
+  }
+
+  // Load facility points
+  fetch(pointFilePath)
     .then(response => response.json())
     .then(data => {
-      // Add the GeoJSON data to the map with custom marker and interactivity
       currentDayLayer = L.geoJSON(data, {
         onEachFeature: function (feature, layer) {
-          // When a marker is clicked
           layer.on('click', function () {
-            // Reset previous selection
             if (selectedMarker) {
               selectedMarker.setStyle(selectedMarker.options._originalStyle);
             }
 
-            // Highlight the selected marker
             layer.setStyle({ radius: 10, weight: 2 });
             selectedMarker = layer;
 
-            // Show feature info in side panel
             updateLocationInfo(feature.properties);
           });
 
-          // Marker hover styling
           layer.on('mouseover', function () {
             if (layer !== selectedMarker) {
               layer.setStyle({ radius: 8, weight: 2 });
             }
           });
 
-          // Reset styling on mouse out
           layer.on('mouseout', function () {
             if (layer !== selectedMarker) {
               layer.setStyle(layer.options._originalStyle);
@@ -104,9 +103,8 @@ function loadDay(dayNumber) {
           });
         },
         pointToLayer: function (feature, latlng) {
-          let color = feature.properties.cat_color || '#808080'; // Default gray color
+          let color = feature.properties.cat_color || '#808080';
 
-          // Create a circle marker for the facility
           let marker = L.circleMarker(latlng, {
             radius: 6,
             fillColor: color,
@@ -116,7 +114,6 @@ function loadDay(dayNumber) {
             pane: 'pointsPane'
           });
 
-          // Save original style to reset later
           marker.options._originalStyle = {
             radius: 6,
             fillColor: color,
@@ -129,37 +126,30 @@ function loadDay(dayNumber) {
         }
       }).addTo(map);
 
-      // Set default instructions in the info panel
       setDefaultLocationInfo();
     });
-}
 
-// Load Day 1 by default when the page loads
-loadDay(1);
-
-/**
- * Load and display the SPC Outlook polygons.
- */
-fetch('data/SPCOutlook.geojson')
-  .then(response => response.json())
-  .then(data => {
-    outlookLayer = L.geoJSON(data, {
-      style: function (feature) {
-        return {
-          color: feature.properties.stroke || '#3388ff',
-          weight: 2,
-          fillColor: feature.properties.fill || '#3388ff',
-          fillOpacity: 0.3
-        };
-      },
-      onEachFeature: function (feature, layer) {
-        // Add popup with label info
-        let label = feature.properties.LABEL || 'SPC Outlook';
-        let label2 = feature.properties.LABEL2 || '';
-        layer.bindPopup(`<h3>${label}</h3><p>${label2}</p>`);
-      }
-    }).addTo(map);
-  });
+  // Load outlook polygons
+  fetch(outlookFilePath)
+    .then(response => response.json())
+    .then(data => {
+      outlookLayer = L.geoJSON(data, {
+        style: function (feature) {
+          return {
+            color: feature.properties.stroke || '#3388ff',
+            weight: 2,
+            fillColor: feature.properties.fill || '#3388ff',
+            fillOpacity: 0.3
+          };
+        },
+        onEachFeature: function (feature, layer) {
+          let label = feature.properties.LABEL || 'SPC Outlook';
+          let label2 = feature.properties.LABEL2 || '';
+          layer.bindPopup(`<h3>${label}</h3><p>${label2}</p>`);
+        }
+      }).addTo(map);
+    });
+  }
 
 /**
  * Handle clicks on empty parts of the map.
