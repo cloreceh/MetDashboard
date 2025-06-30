@@ -26,7 +26,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Calibri, sans-serif;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -34,13 +34,14 @@ body {
 }
 
 h1 {
-  margin: 1rem 1rem 1.5rem;
-  font-size: 2rem;
+  margin: 1rem 100px 1.5rem;
+  font-size: 2.5rem;
   text-align: left;
 }
 
 /* Main Layout */
 .main-layout {
+  margin-left: 100px;
   display: flex;
   flex: 1;
   overflow: hidden;
@@ -50,14 +51,17 @@ h1 {
 
 /* Navigation bar */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 80px;
-  background-color: var(--color-primary-dark);
+  height: 100vh;                    /* full screen height */
+  background-color: var(--color-primary-pale);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  z-index: 1000;                    /* keep it above other content */
 }
 
 .navbar a {

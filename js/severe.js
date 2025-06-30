@@ -7,7 +7,7 @@ let selectedMarker  = null;
 let currentDay      = 1;
 
 // Initialize the map
-const map = L.map('map').setView([39.5, -98.35], 4);
+const map = L.map('map', {attributionControl: false}).setView([39.5, -98.35], 4);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap contributors'
 }).addTo(map);
