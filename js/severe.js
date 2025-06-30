@@ -25,10 +25,7 @@ function setDefaultLocationInfo() {
   `;
 }
 
-/**
- * Update the info‐box.
- * Accepts either a full GeoJSON Feature (with .properties) or just the properties object.
- */
+/** Update the info‐box.*/
 function updateLocationInfo(input) {
   console.log("▶ updateLocationInfo got:", input);
 

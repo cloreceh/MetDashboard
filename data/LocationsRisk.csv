@@ -1,19 +1,20 @@
-﻿LAT,LON,CLIENT,FACILITY_NAME,Fire Risk,Flooding Risk,Severe Risk,Hurricane Risk,High Wind Risk
-39.9622601,-83.0007065,AnteaGroup,Pinehill Medical Center,None,None,None,Moderate,Low
-35.996653,-78.9018053,AnteaGroup,Greenwood Research Lab,Slight,Moderate,None,None,None
-35.2272086,-80.8430827,AnteaGroup,Everest Industrial Plant,None,None,None,None,None
-32.7762719,-96.7968559,AnteaGroup,Sunrise Logistics Hub,None,None,None,None,Low
-35.996653,-78.9018053,AnteaGroup,Summit Manufacturing,Moderate,Slight,None,Low,None
-40.0149856,-105.270545,AnteaGroup,Northpoint Warehouse,None,None,None,None,None
-39.7990175,-89.6439575,AnteaGroup,Cedar Valley Distribution,None,None,Slight,None,Slight
-32.0790074,-81.0921335,AnteaGroup,Horizon Tech Park,Slight,Slight,None,Low,None
-32.0790074,-81.0921335,AnteaGroup,Lakeside Processing Facility,None,Extreme,None,None,None
-42.8867166,-78.8783922,AnteaGroup,Ironclad Foundry,None,None,None,None,None
-29.7589382,-95.3676974,AnteaGroup,Bluewave Water Treatment,Slight,None,Slight,None,Low
-25.7741728,-80.19362,AnteaGroup,Silver Creek Power Plant,None,Slight,None,Low,None
-35.996653,-78.9018053,AnteaGroup,Gateway Transportation Depot,Low,None,Moderate,None,Slight
-40.7127281,-74.0060152,AnteaGroup,Riverbend Recycling Center,None,None,None,High,None
-39.7990175,-89.6439575,AnteaGroup,Coastal Fisheries HQ,None,None,Slight,None,None
-39.7392364,-104.984862,AnteaGroup,Aspen Biotech Center,Low,Slight,None,None,None
-29.7589382,-95.3676974,AnteaGroup,Orchard Chemical Solutions,None,None,None,Low,Low
-32.7174202,-117.162772,AnteaGroup,Maplewood Packaging Plant,None,Slight,None,None,None
+LAT,LON,CLIENT,Location,Fire Risk,Flooding Risk,Severe Risk,Hurricane Risk
+30.3865013,-97.7528657,AnteaGroup,Greater Austin TX,None,None,General,None
+38.5892643,-121.277034,AnteaGroup,Greater California - Sacramento CA,None,None,None,None
+37.4057302,-121.977909,AnteaGroup,Greater California - San Jose CA,None,None,None,None
+40.0522342,-82.9164901,AnteaGroup,Greater Great Lakes - Columbus OH,None,None,None,None
+42.4960944,-83.3912891,AnteaGroup,Greater Great Lakes - Detroit MI,None,None,Marginal,None
+40.492247,-79.869825,AnteaGroup,Greater Great Lakes - Pittsburgh PA,None,None,General,None
+42.2993222,-71.4016037,AnteaGroup,Greater New England - Boston MA,None,None,None,None
+41.760249,-72.739919,AnteaGroup,Greater New England - Hartford CT,None,None,None,None
+41.0348698,-73.7647624,AnteaGroup,Greater New York - White Plains NY,None,None,None,None
+45.4653643,-122.6635583,AnteaGroup,Greater Pacific Northwest - Portland OR,None,None,General,None
+47.6612819,-122.0952982,AnteaGroup,Greater Pacific Northwest - Seattle WA,None,None,General,None
+39.934903,-75.048866,AnteaGroup,Greater Philadelphia - Cherry Hill NJ,None,None,None,None
+39.7186923,-105.131743,AnteaGroup,Greater Rocky Mountain - Denver CO,None,None,None,None
+40.5613903,-105.0285866,AnteaGroup,Greater Rocky Mountain - Fort Collins CO,None,None,None,None
+33.976733,-84.213739,AnteaGroup,Greater Southeast - Atlanta GA,None,Slight,None,None
+35.0566966,-80.8377586,AnteaGroup,Greater Southeast - Charlotte NC,None,Slight,None,None
+41.8081285,-88.0613135,AnteaGroup,Greater St Louis - Chicago IL,None,None,General,None
+38.7013756,-90.446086,AnteaGroup,Greater St Louis - St Louis MO,None,Slight,None,None
+45.0716387,-93.2212239,AnteaGroup,Greater St. Paul - St. Paul MN,None,None,Marginal,None

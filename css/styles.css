@@ -258,3 +258,12 @@ h1 {
   border-color: var(--color-gray-border);
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
+
+.no-risk-overlay {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 6px 10px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
