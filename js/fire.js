@@ -78,7 +78,7 @@ function loadDay(dayNumber) {
   fetch(pointsFP)
     .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(geojson => {
-      const prevName = selectedMarker?.feature?.properties?.FACILITY_NAME || null;
+      const prevName = selectedMarker?.feature?.properties?.LOCATION || null;
       currentDayLayer = L.geoJSON(geojson, {
         pane: 'pointsPane',
         pointToLayer: (feature, latlng) => {
