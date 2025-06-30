@@ -1,202 +1,169 @@
-// Track currently loaded layers
-var currentDayLayer = null;
-var outlookLayer = null;
-var selectedMarker = null;
-var currentDay = 1;
+// severe.js
 
-// Initialize the Leaflet map centered on the U.S.
-var map = L.map('map').setView([39.5, -98.35], 4);
+// Track state
+let currentDayLayer = null;
+let outlookLayer    = null;
+let selectedMarker  = null;
+let currentDay      = 1;
 
-// Create custom panes to manage layer order
-map.createPane('pointsPane');
-map.getPane('pointsPane').style.zIndex = 650;
-
-map.createPane('polygonPane');
-map.getPane('polygonPane').style.zIndex = 200;
-
-// Add OpenStreetMap tile layer
+// Initialize the map
+const map = L.map('map').setView([39.5, -98.35], 4);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 
-/**
- * Set default right-side info panel content.
- */
+// Panes for correct z‐order
+map.createPane('pointsPane').style.zIndex  = 650;
+map.createPane('polygonPane').style.zIndex = 200;
+
+/** Reset to default “no selection” message */
 function setDefaultLocationInfo() {
-  const panel = document.querySelector('.location-info');
-  if (!panel) {
-    console.warn("No .location-info element found when setting default info.");
-    return;
-  }
-  panel.innerHTML = `
-    <div style="text-align:center; padding: 1rem;">
+  document.querySelector('.location-info').innerHTML = `
+    <div style="display:flex; align-items:center; justify-content:center; height:100%;">
       <h2>Select a location for specific risk information</h2>
     </div>
   `;
 }
 
 /**
- * Update info panel with clicked feature properties.
+ * Update the info‐box.
+ * Accepts either a full GeoJSON Feature (with .properties) or just the properties object.
  */
-function updateLocationInfo(properties) {
-  console.log("updateLocationInfo called with:", properties);
-  const panel = document.querySelector('.location-info');
-  if (!panel) {
-    console.warn("No .location-info element found when updating.");
-    return;
-  }
+function updateLocationInfo(input) {
+  console.log("▶ updateLocationInfo got:", input);
 
-  let riskColor = properties.cat_color || '#ffffff';
+  let props;
+  if (input && input.properties) props = input.properties;
+  else if (input && typeof input === 'object') props = input;
+  else return setDefaultLocationInfo();
 
-  panel.innerHTML = `
+  const {
+    FACILITY_NAME   = 'Unknown Facility',
+    cat_color       = '#ffffff',
+    cat_risk        = 'N/A',
+    torn_risk       = 'N/A',
+    torn_sig_risk   = 'N/A',
+    hail_risk       = 'N/A',
+    hail_sig_risk   = 'N/A',
+    wind_risk       = 'N/A',
+    wind_sig_risk   = 'N/A'
+  } = props;
+
+  document.querySelector('.location-info').innerHTML = `
     <div style="padding:1rem;">
-      <h3>Facility: ${properties.FACILITY_NAME || 'Unknown Facility'}</h3>
-      <h2 style="color:${riskColor}; margin-top: 1rem;">Overall Severe Risk: ${properties.cat_risk || 'N/A'}</h2>
-
-      <p><strong>Tornado Risk:</strong><br> ${properties.torn_risk || 'N/A'}</p>
-      <p><strong>Significant Tornado Risk:</strong><br> ${properties.torn_sig_risk || 'N/A'}</p>
-
-      <p><strong>Hail Risk:</strong><br> ${properties.hail_risk || 'N/A'}</p>
-      <p><strong>Significant Hail Risk:</strong><br> ${properties.hail_sig_risk || 'N/A'}</p>
-
-      <p><strong>High Wind Risk:</strong><br> ${properties.wind_risk || 'N/A'}</p>
-      <p><strong>Significant High Wind Risk:</strong><br> ${properties.wind_sig_risk || 'N/A'}</p>
+      <h3>Facility: ${FACILITY_NAME}</h3>
+      <h2 style="color:${cat_color}; margin-top:1rem;">
+        Overall Severe Risk: ${cat_risk}
+      </h2>
+      <p style="margin-top:1rem;"><strong>Tornado Risk:</strong><br>${torn_risk}</p>
+      <p><strong>Significant Tornado Risk:</strong><br>${torn_sig_risk}</p>
+      <p style="margin-top:1rem;"><strong>Hail Risk:</strong><br>${hail_risk}</p>
+      <p><strong>Significant Hail Risk:</strong><br>${hail_sig_risk}</p>
+      <p style="margin-top:1rem;"><strong>High Wind Risk:</strong><br>${wind_risk}</p>
+      <p><strong>Significant Wind Risk:</strong><br>${wind_sig_risk}</p>
     </div>
   `;
 }
 
 /**
- * Load facility and outlook data for selected day.
+ * Load both the facility points and SPC outlook polygons for a given day.
  */
 function loadDay(dayNumber) {
   currentDay = dayNumber;
+  const ts        = `?t=${Date.now()}`;
+  const pointsFP  = `data/SPC_Data/SPC_day_${dayNumber}.geojson${ts}`;
+  const outlookFP = `data/SPC_Outlooks/SPCOutlook_day_${dayNumber}.geojson${ts}`;
 
-  const timestamp = `?t=${new Date().getTime()}`;
-  const pointFilePath = `data/SPC_Data/SPC_day_${dayNumber}.geojson${timestamp}`;
-  const outlookFilePath = `data/SPC_Outlooks/SPCOutlook_day_${dayNumber}.geojson${timestamp}`;
+  console.log(`→ Loading Day ${dayNumber}`, { pointsFP, outlookFP });
 
-  console.log(`Loading Day ${dayNumber}`);
-  console.log("Facility file:", pointFilePath);
-  console.log("Outlook file:", outlookFilePath);
-
-  // Capture the facility name of the selected marker (if any)
-  const previousFacilityName =
-    selectedMarker && selectedMarker.feature?.properties?.FACILITY_NAME;
-
-  selectedMarker = null;
-
+  // Remove old layers, reset selection & info
   if (currentDayLayer) map.removeLayer(currentDayLayer);
-  if (outlookLayer) map.removeLayer(outlookLayer);
+  if (outlookLayer)    map.removeLayer(outlookLayer);
+  selectedMarker = null;
+  setDefaultLocationInfo();
 
-  // Load facilities
-  fetch(pointFilePath)
-    .then((response) => {
-      if (!response.ok)
-        throw new Error(`Error loading facility data: ${response.status}`);
-      return response.json();
-    })
-    .then((data) => {
-      currentDayLayer = L.geoJSON(data, {
-        pointToLayer: function (feature, latlng) {
-          const color = feature.properties.cat_color || '#808080';
+  // 1) Facility points
+  fetch(pointsFP)
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(geojson => {
+      // If we’d previously clicked a facility, remember its name
+      const prevName = selectedMarker?.feature?.properties?.FACILITY_NAME || null;
 
-          const marker = L.circleMarker(latlng, {
+      currentDayLayer = L.geoJSON(geojson, {
+        pane: 'pointsPane',
+        pointToLayer: (feature, latlng) => {
+          const fill = feature.properties.cat_color || '#888888';
+          const m = L.circleMarker(latlng, {
             radius: 6,
-            fillColor: color,
-            color: "#000",
+            fillColor: fill,
+            color: '#000',
             weight: 1,
             fillOpacity: 0.8,
-            pane: "pointsPane",
+            pane: 'pointsPane'
           });
-
-          marker.feature = feature;
-
-          marker.options._originalStyle = {
-            radius: 6,
-            fillColor: color,
-            color: "#000",
-            weight: 1,
-            fillOpacity: 0.8,
+          // Store original style for resetting later
+          m.options._originalStyle = {
+            radius:6, fillColor:fill, color:'#000', weight:1, fillOpacity:0.8
           };
-
-          return marker;
+          m.feature = feature;
+          return m;
         },
+        onEachFeature: (feature, layer) => {
+          layer.on('click', e => {
+            // ← THIS LINE is the crucial fix:
+            L.DomEvent.stopPropagation(e);
 
-        onEachFeature: function (feature, layer) {
-          layer.feature = feature;
-
-          layer.on("click", function () {
-            console.log("Clicked marker:", feature.properties);
-
+            console.log("Clicked:", feature.properties.FACILITY_NAME);
+            // Reset previous selection
             if (selectedMarker) {
               selectedMarker.setStyle(selectedMarker.options._originalStyle);
             }
-
-            layer.setStyle({ radius: 10, weight: 2 });
+            // Highlight this one
+            layer.setStyle({ radius:10, weight:2 });
             selectedMarker = layer;
 
-            updateLocationInfo(feature.properties);
+            // And update the info panel
+            updateLocationInfo(feature);
           });
 
-          layer.on("mouseover", function () {
-            if (layer !== selectedMarker) {
-              layer.setStyle({ radius: 8, weight: 2 });
-            }
-          });
-
-          layer.on("mouseout", function () {
-            if (layer !== selectedMarker) {
-              layer.setStyle(layer.options._originalStyle);
-            }
-          });
-
-          if (
-            previousFacilityName &&
-            feature.properties.FACILITY_NAME === previousFacilityName
-          ) {
-            layer.setStyle({ radius: 10, weight: 2 });
+          // If this facility was the one previously clicked, re-highlight it
+          if (feature.properties.FACILITY_NAME === prevName) {
+            layer.setStyle({ radius:10, weight:2 });
             selectedMarker = layer;
-            updateLocationInfo(feature.properties);
+            updateLocationInfo(feature);
           }
-        },
+        }
       }).addTo(map);
 
-      if (!selectedMarker) {
-        setDefaultLocationInfo();
-      }
+      // If nothing is selected on load, show the default message
+      if (!selectedMarker) setDefaultLocationInfo();
     })
-    .catch((error) => console.error("Facility fetch error:", error));
+    .catch(err => console.error('Facility fetch error:', err));
 
-  // Load outlook polygons
-  fetch(outlookFilePath)
-    .then((response) => {
-      if (!response.ok)
-        throw new Error(`Error loading outlook data: ${response.status}`);
-      return response.json();
-    })
-    .then((data) => {
-      outlookLayer = L.geoJSON(data, {
-        pane: "polygonPane",
-        style: function (feature) {
-          return {
-            color: feature.properties.stroke || "#3388ff",
-            weight: 2,
-            fillColor: feature.properties.fill || "#3388ff",
-            fillOpacity: 0.3,
-          };
-        },
-        onEachFeature: function (feature, layer) {
-          const label = feature.properties.LABEL || "SPC Outlook";
-          const label2 = feature.properties.LABEL2 || "";
-          layer.bindPopup(`<h3>${label}</h3><p>${label2}</p>`);
-        },
+  // 2) Outlook polygons
+  fetch(outlookFP)
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(geojson => {
+      outlookLayer = L.geoJSON(geojson, {
+        pane: 'polygonPane',
+        style: f => ({
+          color: f.properties.stroke   || '#3388ff',
+          weight: 2,
+          fillColor: f.properties.fill || 'transparent',
+          fillOpacity: 0.3
+        }),
+        onEachFeature: (feature, layer) => {
+          const L1 = feature.properties.LABEL  || 'SPC Outlook';
+          const L2 = feature.properties.LABEL2 || '';
+          layer.bindPopup(`<h3>${L1}</h3><p>${L2}</p>`);
+        }
       }).addTo(map);
     })
-    .catch((error) => console.error("Outlook fetch error:", error));
+    .catch(err => console.error('Outlook fetch error:', err));
 }
 
-// Deselect marker and reset info panel on map click
-map.on("click", function () {
+// Clicking on the bare map (not a marker) clears selection & panel
+map.on('click', () => {
   if (selectedMarker) {
     selectedMarker.setStyle(selectedMarker.options._originalStyle);
     selectedMarker = null;
@@ -204,7 +171,5 @@ map.on("click", function () {
   setDefaultLocationInfo();
 });
 
-// Wait until the DOM is ready before loading default day
-window.addEventListener('DOMContentLoaded', () => {
-  loadDay(1);
-});
+// On page-load, grab Day 1
+window.addEventListener('DOMContentLoaded', () => loadDay(1));
