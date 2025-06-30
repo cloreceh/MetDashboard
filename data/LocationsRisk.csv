@@ -1,32 +1,19 @@
 ﻿LAT,LON,CLIENT,FACILITY_NAME,Fire Risk,Flooding Risk,Severe Risk,Hurricane Risk,High Wind Risk
-39.9622601,-83.0007065,EsteMauder,Pinehill Medical Center,None,None,None,Moderate,Low
-35.996653,-78.9018053,EsteMauder,Greenwood Research Lab,Slight,Moderate,None,None,None
-35.2272086,-80.8430827,EsteMauder,Everest Industrial Plant,None,None,None,None,None
-32.7762719,-96.7968559,EsteMauder,Sunrise Logistics Hub,None,None,None,None,Low
-35.996653,-78.9018053,EsteMauder,Summit Manufacturing,Moderate,Slight,None,Low,None
-40.0149856,-105.270545,EsteMauder,Northpoint Warehouse,None,None,None,None,None
-39.7990175,-89.6439575,EsteMauder,Cedar Valley Distribution,None,None,Slight,None,Slight
-32.0790074,-81.0921335,EsteMauder,Horizon Tech Park,Slight,Slight,None,Low,None
-32.0790074,-81.0921335,EsteMauder,Lakeside Processing Facility,None,Extreme,None,None,None
-42.8867166,-78.8783922,EsteMauder,Ironclad Foundry,None,None,None,None,None
-29.7589382,-95.3676974,EsteMauder,Bluewave Water Treatment,Slight,None,Slight,None,Low
-25.7741728,-80.19362,EsteMauder,Silver Creek Power Plant,None,Slight,None,Low,None
-35.996653,-78.9018053,EsteMauder,Gateway Transportation Depot,Low,None,Moderate,None,Slight
-40.7127281,-74.0060152,EsteMauder,Riverbend Recycling Center,None,None,None,High,None
-39.7990175,-89.6439575,EsteMauder,Coastal Fisheries HQ,None,None,Slight,None,None
-39.7392364,-104.984862,EsteMauder,Aspen Biotech Center,Low,Slight,None,None,None
-29.7589382,-95.3676974,EsteMauder,Orchard Chemical Solutions,None,None,None,Low,Low
-32.7174202,-117.162772,EsteMauder,Maplewood Packaging Plant,None,Slight,None,None,None
-42.8867166,-78.8783922,EsteMauder,Highland Data Center,High,None,Low,None,None
-39.1014537,-84.5124602,EsteMauder,Golden Plains Agribusiness,None,Slight,None,None,None
-33.7489924,-84.3902644,EsteMauder,Metro Auto Assembly,None,Low,None,Slight,Low
-39.7392364,-104.984862,EsteMauder,Western Energy Refinery,None,None,None,None,None
-34.0536909,-118.242766,EsteMauder,Starview Aerospace Facility,Slight,None,High,None,None
-40.7127281,-74.0060152,EsteMauder,Neptune Shipping Terminal,None,None,None,Slight,Slight
-39.1014537,-84.5124602,EsteMauder,Crimson Electronics Lab,Extreme,Slight,None,None,None
-30.2711286,-97.7436995,EsteMauder,Willow Creek Textile Mill,None,None,None,None,Low
-47.2455013,-122.438329,EsteMauder,Urban Infrastructure Hub,None,Moderate,Slight,Slight,None
-38.8339578,-104.825348,EsteMauder,Liberty Steelworks,Low,None,None,High,Low
-38.8339578,-104.825348,EsteMauder,Frontier Robotics Center,None,None,None,None,None
-27.9477595,-82.458444,EsteMauder,Summerset Cold Storage,Moderate,None,Slight,None,Slight
-47.6571934,-117.42351,EsteMauder,Redwood Aviation Complex,None,None,None,None,None
+39.9622601,-83.0007065,AnteaGroup,Pinehill Medical Center,None,None,None,Moderate,Low
+35.996653,-78.9018053,AnteaGroup,Greenwood Research Lab,Slight,Moderate,None,None,None
+35.2272086,-80.8430827,AnteaGroup,Everest Industrial Plant,None,None,None,None,None
+32.7762719,-96.7968559,AnteaGroup,Sunrise Logistics Hub,None,None,None,None,Low
+35.996653,-78.9018053,AnteaGroup,Summit Manufacturing,Moderate,Slight,None,Low,None
+40.0149856,-105.270545,AnteaGroup,Northpoint Warehouse,None,None,None,None,None
+39.7990175,-89.6439575,AnteaGroup,Cedar Valley Distribution,None,None,Slight,None,Slight
+32.0790074,-81.0921335,AnteaGroup,Horizon Tech Park,Slight,Slight,None,Low,None
+32.0790074,-81.0921335,AnteaGroup,Lakeside Processing Facility,None,Extreme,None,None,None
+42.8867166,-78.8783922,AnteaGroup,Ironclad Foundry,None,None,None,None,None
+29.7589382,-95.3676974,AnteaGroup,Bluewave Water Treatment,Slight,None,Slight,None,Low
+25.7741728,-80.19362,AnteaGroup,Silver Creek Power Plant,None,Slight,None,Low,None
+35.996653,-78.9018053,AnteaGroup,Gateway Transportation Depot,Low,None,Moderate,None,Slight
+40.7127281,-74.0060152,AnteaGroup,Riverbend Recycling Center,None,None,None,High,None
+39.7990175,-89.6439575,AnteaGroup,Coastal Fisheries HQ,None,None,Slight,None,None
+39.7392364,-104.984862,AnteaGroup,Aspen Biotech Center,Low,Slight,None,None,None
+29.7589382,-95.3676974,AnteaGroup,Orchard Chemical Solutions,None,None,None,Low,Low
+32.7174202,-117.162772,AnteaGroup,Maplewood Packaging Plant,None,Slight,None,None,None
