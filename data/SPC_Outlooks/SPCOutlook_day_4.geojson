@@ -1,1 +1,1 @@
-{"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "GeometryCollection", "geometries": []}, "properties": {"DN": 0, "VALID": "202506231200", "EXPIRE": "202506241200", "ISSUE": "202506200842", "LABEL": "", "LABEL2": "", "stroke": "", "fill": ""}}]}
+{"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "GeometryCollection", "geometries": []}, "properties": {"DN": 0, "VALID": "202507041200", "EXPIRE": "202507051200", "ISSUE": "202507010900", "LABEL": "", "LABEL2": "", "stroke": "", "fill": ""}}]}
