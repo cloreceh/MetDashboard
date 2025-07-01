@@ -29,38 +29,56 @@ function setDefaultLocationInfo() {
 function updateLocationInfo(input) {
   console.log("▶ updateLocationInfo got:", input);
 
+  // grab the properties object (or bail out)
   let props;
-  if (input && input.properties) props = input.properties;
-  else if (input && typeof input === 'object') props = input;
+  if (input && input.properties)           props = input.properties;
+  else if (input && typeof input === "object") props = input;
   else return setDefaultLocationInfo();
 
+  // always have a facility name and a color
   const {
-    FACILITY_NAME   = 'Unknown Facility',
-    cat_color       = '#ffffff',
-    cat_risk        = 'N/A',
-    torn_risk       = 'N/A',
-    torn_sig_risk   = 'N/A',
-    hail_risk       = 'N/A',
-    hail_sig_risk   = 'N/A',
-    wind_risk       = 'N/A',
-    wind_sig_risk   = 'N/A'
+    FACILITY_NAME = "Unknown Facility",
+    cat_color     = "#ffffff"
   } = props;
 
-  document.querySelector('.location-info').innerHTML = `
+  // helper to convert null/undefined/"null"/"" → "No Risk"
+  function formatRisk(val) {
+    if (val === null || val === undefined) return "No Risk";
+    if (typeof val === "string") {
+      const t = val.trim().toLowerCase();
+      if (t === "" || t === "null") return "No Risk";
+    }
+    return val;
+  }
+
+  // apply it to each of your risk fields
+  const catRisk     = formatRisk(props.cat_risk);
+  const tornRisk    = formatRisk(props.torn_risk);
+  const tornSigRisk = formatRisk(props.torn_sig_risk);
+  const hailRisk    = formatRisk(props.hail_risk);
+  const hailSigRisk = formatRisk(props.hail_sig_risk);
+  const windRisk    = formatRisk(props.wind_risk);
+  const windSigRisk = formatRisk(props.wind_sig_risk);
+
+  // now build your info‐box
+  document.querySelector(".location-info").innerHTML = `
     <div style="padding:1rem;">
       <h3>Facility: ${FACILITY_NAME}</h3>
       <h2 style="color:${cat_color}; margin-top:1rem;">
-        Overall Severe Risk: ${cat_risk}
+        Overall Severe Risk: ${catRisk}
       </h2>
-      <p style="margin-top:1rem;"><strong>Tornado Risk:</strong><br>${torn_risk}</p>
-      <p><strong>Significant Tornado Risk:</strong><br>${torn_sig_risk}</p>
-      <p style="margin-top:1rem;"><strong>Hail Risk:</strong><br>${hail_risk}</p>
-      <p><strong>Significant Hail Risk:</strong><br>${hail_sig_risk}</p>
-      <p style="margin-top:1rem;"><strong>High Wind Risk:</strong><br>${wind_risk}</p>
-      <p><strong>Significant Wind Risk:</strong><br>${wind_sig_risk}</p>
+      <p style="margin-top:1rem;"><strong>Tornado Risk:</strong><br>${tornRisk}</p>
+      <p><strong>Significant Tornado Risk:</strong><br>${tornSigRisk}</p>
+      <p style="margin-top:1rem;"><strong>Hail Risk:</strong><br>${hailRisk}</p>
+      <p><strong>Significant Hail Risk:</strong><br>${hailSigRisk}</p>
+      <p style="margin-top:1rem;"><strong>High Wind Risk:</strong><br>${windRisk}</p>
+      <p><strong>Significant Wind Risk:</strong><br>${windSigRisk}</p>
     </div>
   `;
 }
+
+
+
 
 /**
  * Load both the facility points and SPC outlook polygons for a given day.

@@ -102,6 +102,7 @@ h1 {
   flex: 1;
   display: flex;
   gap: 3rem;
+  margin-bottom: 30px;
 }
 
 .map-container {
